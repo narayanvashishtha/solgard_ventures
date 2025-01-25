@@ -1,0 +1,299 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    color: #355C7D;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header (Fund Name and Tagline - unchanged as requested) */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+#about h1 {
+    font-size: 5.0rem;
+    text-transform: uppercase;
+    color: #355C7D;
+    letter-spacing: 0.1em;
+}
+
+#about p {
+    font-size: 1.8rem;
+    color: #355C7D;
+    margin-left: 1rem;
+    letter-spacing: 0.02em;
+}
+
+/* Navigation */
+/* Navigation Styling */
+nav {
+    position: fixed;  /* Fixed position to keep it at the top right corner */
+    top: 1rem;  /* 1rem from the top */
+    right: 2rem;  /* 2rem from the right edge */
+    display: flex;
+    gap: 2rem;  /* Adds space between the links */
+    align-items: center;  /* Center aligns the items vertically */
+    font-size: 1.2rem;  /* Slightly larger font size */
+    z-index: 1000;  /* Ensures it's always on top */
+}
+
+/* Navigation Links */
+nav a {
+    color: #355C7D;  /* Default link color */
+    text-decoration: none;  /* Removes underline */
+    font-weight: normal;  /* Keeps font weight normal */
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Links */
+nav a:hover {
+    color: #6C5B7B;  /* Hover color change */
+    transform: scale(1.1);  /* Slight zoom-in effect on hover */
+}
+
+/* Active Link (optional) */
+nav a:active {
+    color: #FF6F61;  /* Active link color */
+}
+
+
+
+/* Section Slider (keeping the same for now) */
+.slide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.slide:nth-child(even) {
+    background-color: #f0f3f5;
+}
+
+.slide h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.slide p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Service Section */
+#services {
+    background: linear-gradient(to bottom, #f4f4f9, #ffffff);
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#services h2 {
+    font-size: 4.0rem;
+    text-transform: uppercase;
+    color: #355C7D;
+    letter-spacing: 0.1em;
+    margin-top: 50px;  /* Adds space above the heading to push it down */
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align services */
+}
+
+/* Service Item Layout */
+.service-item {
+    background: #ffffff;
+    margin: 0;
+    padding: 2rem; /* Reduced padding for a more balanced look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px; /* Soft rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Ensuring same image dimensions */
+.service-item img {
+    width: 45vw; /* Image takes 45% of the viewport width */
+    height: 30vw; /* Fixed height to control image size */
+    object-fit: cover; /* Maintain aspect ratio without distortion */
+    border-radius: 10px; /* Optional: Round the corners of the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a light shadow for better visual appeal */
+}
+
+.service-item-content {
+    flex: 1;
+    text-align: left;
+    padding: 0 2rem; /* Added padding to the content */
+}
+
+.service-item-content h3 {
+    font-size: 2rem;
+    color: #355C7D;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.service-item-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6C5B7B;
+}
+
+/* Alternate Layouts for Even and Odd Items */
+.service-item:nth-child(even) {
+    flex-direction: row-reverse; /* Image on the right, text on the left */
+}
+
+.service-item:nth-child(odd) {
+    flex-direction: row; /* Image on the left, text on the right */
+}
+
+/* Footer (if you have a footer) */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #355C7D;
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #355C7D;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 3rem;
+    color: #355C7D;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #355C7D;
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #355C7D;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #6C5B7B;
+    outline: none;
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Button Styling */
+.submit-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #355C7D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #355C7D;
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
